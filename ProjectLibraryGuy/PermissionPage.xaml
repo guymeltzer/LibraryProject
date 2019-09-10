@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="ProjectLibraryGuy.PermissionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjectLibraryGuy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock x:Name="WelcomePermissionPage_TextBlock"  HorizontalAlignment="Left" Margin="577,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="169" Width="751" FontSize="50" FontFamily="Cambria" Foreground="#FF0C0C64"><Run Text="           Hello Administrator,"/><LineBreak/><Run Text="What would you like to do today?"/></TextBlock>
+        <Button x:Name="UserMGMT_BTN" Background="Bisque" Content="User Management System" HorizontalAlignment="Left" Margin="686,297,0,0" VerticalAlignment="Top" Width="489" Height="159" FontSize="36" FontFamily="Cambria" FontWeight="Bold" Click="UserMGMT_BTN_Click"/>
+        <Button x:Name="LibraryMGMT_System" Background="Bisque" Content="Library Management System" HorizontalAlignment="Left" Margin="686,518,0,0" VerticalAlignment="Top" Width="489" Height="159" FontSize="36" FontFamily="Cambria" FontWeight="Bold" Click="LibraryMGMT_System_Click"/>
+        <Button x:Name="Logout_BTN" Background="Bisque" Content="Log Out" HorizontalAlignment="Left" Margin="686,743,0,0" VerticalAlignment="Top" Width="225" Height="165" FontFamily="Cambria" FontSize="35" FontWeight="Bold" Click="Logout_BTN_Click"/>
+        <Button x:Name="Exit_BTN" Background="Bisque" Content="Exit" HorizontalAlignment="Left" Margin="950,743,0,0" VerticalAlignment="Top" Width="225" Height="165" FontSize="36" FontFamily="Cambria" FontWeight="Bold" Click="Exit_BTN_Click"/>
+
+
+    </Grid>
+</Page>

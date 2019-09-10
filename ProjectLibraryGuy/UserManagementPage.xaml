@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="ProjectLibraryGuy.UserManagementPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjectLibraryGuy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ListView x:Name="UserMGMT_ListView" BorderThickness="2" BorderBrush="Black" Background="Cornsilk" HorizontalAlignment="Left" Height="582" Margin="414,146,0,0" VerticalAlignment="Top" Width="406"/>
+        <Button x:Name="UserAdd_BTN" Content="Add" BorderThickness="2" BorderBrush="Black" Background="SeaShell" HorizontalAlignment="Left" Margin="782,844,0,0" VerticalAlignment="Top" Width="220" Height="105" RenderTransformOrigin="0.482,0.152" FontFamily="Cambria" FontSize="36" FontWeight="Bold" Click="UserAdd_BTN_Click"/>
+        <Button x:Name="UserRemove_BTN" Content="Remove" BorderThickness="2" BorderBrush="Black" Background="SeaShell" HorizontalAlignment="Left" Margin="1134,844,0,0" VerticalAlignment="Top" Width="220" Height="105" FontFamily="Cambria" FontSize="36" FontWeight="Bold" Click="UserRemove_BTN_Click"/>
+        <Button x:Name="UserBack_BTN" Content="🡄 Back" BorderThickness="2" BorderBrush="Black" Background="SeaShell" HorizontalAlignment="Left" Margin="414,844,0,0" VerticalAlignment="Top" Height="105" Width="220" FontSize="36" FontFamily="Cambria" FontWeight="Bold" Click="UserBack_BTN_Click"/>
+        <ListView x:Name="IsAdmin_ListView" BorderThickness="2" BorderBrush="Black" Background="Cornsilk" HorizontalAlignment="Left" Height="582" Margin="892,146,0,0" VerticalAlignment="Top" Width="414" FontFamily="Cambria" FontSize="36" IsEnabled="False"/>
+        <TextBox x:Name="Username_TextBox" Background="Beige" HorizontalAlignment="Left" Margin="1408,244,0,0" Text="" VerticalAlignment="Top" Height="150" Width="482" PlaceholderText="Enter user name here : " FontFamily="Cambria" FontSize="35"/>
+        <PasswordBox x:Name="Password_PasswordBox" Background="Beige" HorizontalAlignment="Left" Margin="1408,0,0,0" VerticalAlignment="Center" Width="482" Height="150" PlaceholderText="Please enter password here : " FontSize="36" FontFamily="Cambria"/>
+        <ToggleSwitch x:Name="IsAdmin_ToggleSwitch" Background="MintCream" OffContent="No" OnContent="Yes" Header="Is Admin" HorizontalAlignment="Left" Margin="1556,82,0,0" VerticalAlignment="Top" Height="138" Width="250" FontSize="35" FontFamily="Cambria"/>
+
+    </Grid>
+</Page>

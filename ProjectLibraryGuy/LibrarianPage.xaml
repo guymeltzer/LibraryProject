@@ -1,0 +1,57 @@
+﻿<Page x:Name="AdminPage1"
+    x:Class="ProjectLibraryGuy.LibrarianPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjectLibraryGuy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1600" Height="900" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+
+    <Grid HorizontalAlignment="Center" Height="995" VerticalAlignment="Center" Width="1751">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="96*"/>
+            <RowDefinition Height="98*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="849*"/>
+            <ColumnDefinition Width="879*"/>
+            <ColumnDefinition Width="17*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="WelcomeLibrarian_TxtBlock" HorizontalAlignment="Left" Margin="142.6,20.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="204" Width="765" FontFamily="Cambria" FontSize="50" FontWeight="Bold" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" FocusVisualPrimaryBrush="#FFA23C3C"><Run Text="Hello,"/><LineBreak/><Run Text="please fill in the required fields  :"/></TextBlock>
+        <Button x:Name="BackToMain_BTN" Background="#33C79191" Content="🡄 Back" HorizontalAlignment="Left" Margin="794,258,0,0" VerticalAlignment="Top" Height="90" Width="150" FontSize="35" FontFamily="Cambria" FontWeight="Bold" Grid.Column="1" Grid.Row="3" Click="BackToMain_BTN_Click" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="ISBN_TextBlock" HorizontalAlignment="Left" Margin="100.6,98.8,0,0" Text="ISBN : " TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="175" FontFamily="Cambria" FontSize="36" TextAlignment="Center" Grid.Column="1" Grid.Row="3"/>
+        <TextBox x:Name="ISBN_TextBox" BorderThickness="2" BorderBrush="Black" Background="Beige" HorizontalAlignment="Left" Margin="455.6,103.8,0,0" Text="" VerticalAlignment="Top" Width="278" Height="36" FontSize="20" FontFamily="Cambria" Grid.Column="1" Grid.Row="3"/>
+        <TextBlock x:Name="Name_TextBlock" Margin="128.6,280.2,576.2,0" Text="Name : " TextWrapping="Wrap" VerticalAlignment="Top" Height="53" FontFamily="Cambria" FontSize="36" TextAlignment="Center" Grid.Row="2" Grid.Column="1"/>
+        <TextBox x:Name="Name_TextBox" BorderThickness="2" BorderBrush="Black" Background="Beige" HorizontalAlignment="Left" Margin="455.6,289.2,0,0" Text="" VerticalAlignment="Top" Width="278" Height="36" FontSize="20" FontFamily="Cambria" Grid.Column="1" Grid.Row="2"/>
+        <TextBlock x:Name="Author_TextBlock" HorizontalAlignment="Left" Margin="118.6,347.2,0,0" Text="Author : " TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="183" FontFamily="Cambria" FontSize="36" TextAlignment="Center" Grid.Column="1" Grid.Row="2"/>
+        <TextBox x:Name="Author_TextBox" BorderThickness="2" BorderBrush="Black" Background="Beige" HorizontalAlignment="Left" Margin="455.6,355.2,0,0" Text="" VerticalAlignment="Top" Width="278" Height="36" FontSize="20" FontFamily="Cambria" Grid.Column="1" Grid.Row="2"/>
+        <TextBlock x:Name="PublishingYear_TextBlock" HorizontalAlignment="Left" Margin="137.6,412.2,0,0" Text="Publishing Year : " TextWrapping="Wrap" VerticalAlignment="Top" Height="53" Width="266" FontFamily="Cambria" FontSize="36" TextAlignment="Center" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="PublishingYear_TextBox" BorderThickness="2" BorderBrush="Black" Background="Beige" HorizontalAlignment="Left" Margin="455.6,420.2,0,0" Text="" VerticalAlignment="Top" Width="278" Height="36" FontSize="20" FontFamily="Cambria" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"/>
+        <TextBlock x:Name="CopyNumber_TextBlock" HorizontalAlignment="Left" Margin="98.6,28.8,0,0" Text="Copy Number : " TextWrapping="Wrap" VerticalAlignment="Top" Height="54" Width="315" FontFamily="Cambria" FontSize="36" TextAlignment="Center" Grid.Column="1" Grid.Row="3" RenderTransformOrigin="-0.087,0.467"/>
+        <TextBox x:Name="CopyNumber_TextBox" BorderThickness="2" BorderBrush="Black" Background="Beige" HorizontalAlignment="Left" Margin="455.6,37.8,0,0" Text="" VerticalAlignment="Top" Width="278" Height="36" FontSize="20" FontFamily="Cambria" Grid.Column="1" Grid.Row="3"/>
+        <RelativePanel HorizontalAlignment="Left" Height="36" Margin="562.6,246.2,0,0" VerticalAlignment="Top" Width="278" Grid.Column="1" Grid.Row="2"/>
+        <Button x:Name="Clear" Background="#33C79191" Content="Add" HorizontalAlignment="Left" Margin="794,381,0,0" VerticalAlignment="Top" Height="90" Width="150" FontSize="35" FontFamily="Cambria" Click="AddItem_BTN_Click" Grid.Column="1" Grid.Row="2" RenderTransformOrigin="2.267,2.646" Grid.ColumnSpan="2" Grid.RowSpan="2" FontWeight="Bold"/>
+        <Button x:Name="RemoveItem_BTN" Background="#33C79191" Content="Remove" Grid.Column="1" HorizontalAlignment="Left" Margin="794,216,0,0" Grid.Row="2" VerticalAlignment="Top" Width="150" Height="90" FontSize="35" FontFamily="Cambria" Click="RemoveItem_BTN_Click" Grid.ColumnSpan="2" FontWeight="Bold"/>
+        <TextBlock x:Name="JournalCategory_TextBlock" HorizontalAlignment="Left" Margin="138,315,0,0" Grid.Row="3" Text="Journal Category :" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" FontFamily="Cambria" Height="46" Width="325" Grid.Column="1"/>
+        <TextBlock x:Name="JournalType_TextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="138,247,0,0" Grid.Row="3" Text="Journal Type :" TextWrapping="Wrap" VerticalAlignment="Top" Width="238" Height="54" FontSize="36" FontFamily="Cambria"/>
+        <Button x:Name="Clear_BTN" Content="Clear" Background="#33C79191" Grid.Column="1" HorizontalAlignment="Left" Margin="795,99,0,0" Grid.Row="3" VerticalAlignment="Top" Width="150" Height="90" FontSize="36" FontFamily="Cambria" Click="Clear_BTN_Click" Grid.ColumnSpan="2" RenderTransformOrigin="0.44,-0.694" FontWeight="Bold"/>
+        <RadioButton x:Name="BookRadioButton" Background="Azure" Content="Book" Grid.Column="1" HorizontalAlignment="Left" Margin="138,207,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.808,0.391" FontFamily="Cambria" FontSize="35" Checked="BookRadioButton_Checked"/>
+        <RadioButton x:Name="JournalRadioButton" Content="Journal" Grid.Column="1" HorizontalAlignment="Left" Margin="595,207,0,0" Grid.Row="2" VerticalAlignment="Top" FontFamily="Cambria" FontSize="35" Checked="JournalRadioButton_Checked"/>
+        <TextBox x:Name="JournalCategory_TextBox" BorderThickness="2" BorderBrush="Black" Background="Beige" Grid.Column="1" HorizontalAlignment="Left" Margin="456,326,0,0" Grid.Row="3" Text="" VerticalAlignment="Top" Width="279" Height="36" FontSize="20" FontFamily="Cambria"/>
+        <TextBox x:Name="JournalType_TextBox" BorderThickness="2" BorderBrush="Black" Background="Beige" Grid.Column="1" HorizontalAlignment="Left" Margin="456,253,0,0" Grid.Row="3" Text="" VerticalAlignment="Top" Width="278" Height="36" FontSize="20" FontFamily="Cambria"/>
+        <Button x:Name="LibSearch_BTN" Background="#33C79191" Content="Search" Grid.Column="2" HorizontalAlignment="Left" Margin="389,83,0,0" Grid.Row="2" VerticalAlignment="Top" Width="198" Height="56" FontFamily="Cambria" FontSize="35" Click="LibSearch_BTN_Click" FocusVisualPrimaryBrush="#FF9C4E4E" FontWeight="Bold"/>
+        <ListView x:Name="NameListView" BorderThickness="2" BorderBrush="Black" Background="Beige" Grid.Column="2" HorizontalAlignment="Left" Height="595" Margin="126,211,0,0" Grid.Row="2" VerticalAlignment="Top" Width="244" Grid.RowSpan="2" FontFamily="Cambria" FontSize="20"/>
+        <ListView x:Name="TypeListView" BorderThickness="2" BorderBrush="Black" Background="Beige" Grid.Column="2" HorizontalAlignment="Left" Height="597" Margin="387,211,0,0" Grid.Row="2" VerticalAlignment="Top" Width="200"  Grid.RowSpan="2" FontFamily="Cambria" FontSize="20"/>
+        <ListView x:Name="IsBorrowedListView" BorderThickness="2" BorderBrush="Black" Background="Beige" Grid.Column="2" HorizontalAlignment="Left" Height="599" Margin="602,209,0,0" Grid.Row="2" VerticalAlignment="Top" Width="200" Foreground="#FFD6D4D4" Grid.RowSpan="2" FontFamily="Cambria" FontSize="20"/>
+        <TextBox x:Name="BookCategory_TextBox" BorderThickness="2" BorderBrush="Black" Background="Beige" Grid.Column="1" HorizontalAlignment="Left" Margin="456,178,0,0" Grid.Row="3" Text="" VerticalAlignment="Top" Width="279" Height="36" FontFamily="Cambria" FontSize="20"/>
+        <TextBlock x:Name="BookCategory_TextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="139,171,0,0" Grid.Row="3" Text="Book Category :" TextWrapping="Wrap" VerticalAlignment="Top" Width="238" Height="57" FontFamily="Cambria" FontSize="35"/>
+        <TextBlock x:Name="NameListViewTitle_TextBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="216,160,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="40" FontSize="32" FontFamily="Cambria" TextDecorations="Underline"><Run Text="Title"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="TypeListViewTitle_TextBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="384,158,0,0" Grid.Row="2" Text="Book / Journal" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="40" FontSize="32" FontFamily="Cambria" TextDecorations="Underline"/>
+        <TextBlock x:Name="IsBorrowedListViewTitle_TextBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="604,158,0,0" Grid.Row="2" Text="Is It Borrowed?" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="40" FontSize="32" FontFamily="Cambria" TextDecorations="Underline"/>
+        <Button x:Name="ShowAllDetails_BTN" Background="#33C79191!" Content="Show All Details" Grid.Column="2" HorizontalAlignment="Left" Margin="148,83,0,0" Grid.Row="2" VerticalAlignment="Top" Height="56" Width="222" FontSize="25" FontFamily="Cambria" FontWeight="Bold" Click="ShowAllDetails_BTN_Click"/>
+    </Grid>
+</Page>
